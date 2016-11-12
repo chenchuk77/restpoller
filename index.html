@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MovieController">
+  <head>
+    <link rel="stylesheet" href="css/urlbox.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/table.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app2.js"></script>
+    <title> RestTrack </title>
+  </head>
+<body>
+
+  <div ng-init="init()" />
+
+  <div id="div_buttons">
+    <button class="button" ng-click ="start()">Start</button>
+    <button class="button" ng-click ="cont()">Continue</button>
+    <button class="button" ng-click ="stop()">Stop</button>
+    <button class="button" ng-click ="dump()">Dump</button>
+    <input type='search' value='http://jsonplaceholder.typicode.com/posts/'>
+  </div>
+
+  <div id="table_placeholder" />
+
+  </body>
+</html>
