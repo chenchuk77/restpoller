@@ -1,5 +1,5 @@
 table {
-    width: 750px;
+    /*width: 750px;*/
     border-collapse: collapse;
     margin:50px auto;
 
@@ -9,7 +9,7 @@ tr:nth-of-type(odd) {
     background: #eee;
 }
 th {
-    background: #3498db;
+    background-color: #4CAF50;
     color: white;
     font-weight: bold;
 }
@@ -17,5 +17,5 @@ td, th {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
 }
