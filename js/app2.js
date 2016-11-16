@@ -105,19 +105,19 @@ angular.module('myApp', [])
             var table_placeholder = document.getElementById("table_placeholder");
 
             var table = document.createElement("TABLE");
-            table.className = "table";
-            table.border="1";
+            // table.className = "table";
+            // table.border="1";
             table.id="obj_table";
 
             var tr = document.createElement("TR");
-            tr.className="t_row_header";
+            // tr.className="t_row_header";
             table.appendChild(tr);
 
             // add TH with key names from boject
             for (var key in $scope.obj){
                 var th = document.createElement("TH");
                 th.innerHTML = key;
-                th.className="t_header";
+                // th.className="t_header";
                 tr.appendChild(th);
             }
 
@@ -137,7 +137,8 @@ angular.module('myApp', [])
                 if ($scope.index >= 0) {
                     console.log("comparing old " + key + ". OLD=" + $scope.records[$scope.index][key] + ". NEW=" + $scope.obj[key]);
                     if ($scope.records[$scope.index][key] != value) {
-                        td_node.style.backgroundColor = "yellow";
+                        // td_node.style.backgroundColor = "yellow";
+                        td_node.className = "changed";
                     }
                 }
                 console.log("key: "+key+", val: "+value);
