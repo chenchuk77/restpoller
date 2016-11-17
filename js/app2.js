@@ -4,7 +4,7 @@ angular.module('myApp', [])
         $scope.appname='RestLoop';
         $scope.url='http://';
         $scope.currentEnvironment = 0;
-        $scope.intvl = 2000;
+        $scope.intvl = 1000;
         $scope.firstRun = false;
 
         // init params,
@@ -163,10 +163,14 @@ angular.module('myApp', [])
         $scope.dump = function(){
             var data = "";
             for (var i = 0; i < $scope.records.length ; i++) {
-                var str = JSON.stringify($scope.records[i], null, 2); // spacing level = 2
-                data += str;
+                // var str = JSON.stringify($scope.records[i], null, 2); // spacing level = 2
+                var record = JSON.stringify($scope.records[i]);
+                data += '<div id="record">' + record + '</div>'
             }
-            console.log(data);
+            //console.log(data);
+            var dumpWindow = window.open("", "MsgWindow", "width=200,height=100");
+            dumpWindow.document.write("<p>" + data + "</p>");
+
         };
 
         // $scope.transform = function(){
